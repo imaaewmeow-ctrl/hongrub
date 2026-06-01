@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="th"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hong Lap Gaming Community - Rules</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config with Obsidian Pulse Theme -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-container": "#1927d1",
+                    "tertiary-fixed-dim": "#ffb689",
+                    "on-tertiary": "#512300",
+                    "error-container": "#93000a",
+                    "primary": "#bec2ff",
+                    "on-error": "#690005",
+                    "on-error-container": "#ffdad6",
+                    "surface-bright": "#39393b",
+                    "on-surface": "#e5e1e4",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#bec2ff",
+                    "on-secondary": "#000da4",
+                    "tertiary": "#ffb689",
+                    "inverse-on-surface": "#313032",
+                    "on-secondary-fixed-variant": "#1927d1",
+                    "background": "#0e0e10",
+                    "on-tertiary-fixed": "#311300",
+                    "on-tertiary-fixed-variant": "#743500",
+                    "primary-fixed": "#e0e0ff",
+                    "surface-container-highest": "#353437",
+                    "on-surface-variant": "#c6c5d7",
+                    "border-subtle": "rgba(255, 255, 255, 0.08)",
+                    "on-primary": "#000da4",
+                    "surface-container-low": "#1c1b1d",
+                    "surface-container": "#201f22",
+                    "on-primary-fixed-variant": "#222fc2",
+                    "surface-dim": "#131315",
+                    "on-tertiary-container": "#fffdff",
+                    "secondary": "#bec2ff",
+                    "outline": "#454655",
+                    "secondary-fixed-dim": "#bec2ff",
+                    "surface-container-high": "#2a2a2c",
+                    "outline-variant": "#454655",
+                    "inverse-surface": "#e5e1e4",
+                    "surface-glass": "rgba(20, 20, 22, 0.7)",
+                    "surface-tint": "#bec2ff",
+                    "inverse-primary": "#3f4cda",
+                    "surface": "#131315",
+                    "tertiary-container": "#bb5a00",
+                    "on-secondary-fixed": "#000569",
+                    "on-secondary-container": "#a8afff",
+                    "on-primary-container": "#fffdff",
+                    "on-background": "#e5e1e4",
+                    "tertiary-fixed": "#ffdbc8",
+                    "on-primary-fixed": "#000569",
+                    "secondary-fixed": "#e0e0ff",
+                    "accent-glow": "rgba(88, 101, 242, 0.15)",
+                    "surface-variant": "#353437",
+                    "surface-container-lowest": "#0e0e10",
+                    "primary-container": "#5865f2",
+                    "text-muted": "#A1A1AA",
+                    "discord-brand": "#5865F2",
+                    "gold": "#D4AF37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "unit": "4px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "display": ["Sora"],
+                    "body": ["Sora"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0e0e10;
+            color: #e5e1e4;
+            background-image: 
+                radial-gradient(circle at 50% -20%, rgba(88, 101, 242, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(190, 194, 255, 0.05) 0%, transparent 40%),
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+        
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .premium-glow {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .premium-glow:hover {
+            box-shadow: 0 0 40px -10px rgba(190, 194, 255, 0.4);
+            border-color: rgba(190, 194, 255, 0.4);
+            transform: scale(1.02);
+            z-index: 10;
+        }
+
+        .gold-border-glow {
+            border-left: 3px solid #D4AF37;
+        }
+
+        .cyan-border-glow {
+            border-left: 3px solid #00FFFF;
+        }
+
+        .error-border-glow {
+            border-left: 3px solid #ffb4ab;
+        }
+
+        .hero-title {
+            background: linear-gradient(135deg, #fff 30%, #bec2ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 30px rgba(88, 101, 242, 0.2);
+        }
+
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #5865f2, #bec2ff);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .btn-glow:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+        }
+
+        .reveal.active {
+            animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-body text-on-surface">
+<div id="progress-bar"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 h-16 border-b border-border-subtle bg-background/60 backdrop-blur-xl">
+<div class="flex justify-between items-center px-gutter w-full max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-white">Hong Lap</span>
+</div>
+<nav class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-semibold text-primary border-b-2 border-primary pb-5 mt-5" href="#">Rules</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-white transition-colors" href="#">Updates</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-white transition-colors" href="#">Support</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white hover:bg-surface-container-highest/50 p-2 rounded-full transition-all" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-white hover:bg-surface-container-highest/50 p-2 rounded-full transition-all" data-icon="person">person</button>
+</div>
+</div>
+</header>
+<main class="pt-28 md:pt-40 pb-20 px-gutter max-w-container-max mx-auto relative">
+<!-- Hero Section -->
+<section class="mb-20 text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-8">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+            Community Standards
+        </div>
+<h1 class="hero-title text-4xl md:text-6xl font-bold mb-6 tracking-tight leading-tight">
+            📜 กฎการอยู่ร่วมกันและเล่นเกมร่วมกัน <span class="block md:inline">𝐇𝐨𝐧𝐠 𝐋𝐚𝐩</span>
+</h1>
+<p class="text-lg text-on-surface-variant max-w-2xl mx-auto leading-relaxed opacity-80">
+            ยินดีต้อนรับสู่สังคมเกมเมอร์ระดับพรีเมียม โปรดอ่านและทำความเข้าใจกฎเหล่านี้เพื่อรักษามาตรฐานที่ดีของชุมชนเรา
+        </p>
+</section>
+<!-- Rules Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Rule 1: Social Conduct -->
+<div class="lg:col-span-8 reveal" style="animation-delay: 0.1s;">
+<div class="glass-card premium-glow gold-border-glow rounded-3xl p-8 md:p-12 h-full">
+<div class="flex items-center gap-5 mb-10">
+<div class="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center border border-gold/20 shadow-[0_0_20px_rgba(212,175,55,0.15)]">
+<span class="material-symbols-outlined text-gold text-4xl" data-icon="groups">groups</span>
+</div>
+<div>
+<span class="text-gold text-xs font-bold tracking-widest uppercase opacity-70">Section 01</span>
+<h2 class="text-2xl md:text-3xl font-bold text-white">ระเบียบการอยู่ร่วมกัน</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-1 gap-4">
+<div class="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/[0.08] transition-all premium-glow">
+<span class="material-symbols-outlined text-primary shrink-0 text-3xl" data-icon="verified_user">verified_user</span>
+<p class="text-on-surface leading-relaxed">ต้องให้เกียรติผู้อื่น เราจะไม่ยอมให้มีการคุกคาม ล่าแม่มด เหยียดเพศ เหยียดเชื้อชาติ หรือข้อความแสดงความเกลียดชังใด ๆ เกิดขึ้นเป็นอันขาด</p>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/[0.08] transition-all premium-glow">
+<span class="material-symbols-outlined text-gold shrink-0 text-3xl" data-icon="block">block</span>
+<p class="text-on-surface leading-relaxed">ห้ามส่งสแปมหรือข้อความโฆษณาตนเอง รวมถึงการส่งข้อความหาสมาชิกรายอื่นโดยตรง หากไม่ได้รับอนุญาตจากพนักงาน</p>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/[0.08] transition-all premium-glow">
+<span class="material-symbols-outlined text-error shrink-0 text-3xl" data-icon="no_adult_content">no_adult_content</span>
+<p class="text-on-surface leading-relaxed">ไม่มีเนื้อหาจำกัดอายุหรือลามก ซึ่งรวมถึงข้อความ รูปภาพ หรือลิงก์ที่มีเนื้อหาโป๊เปลือย ความรุนแรง หรือเนื้อหาไม่เหมาะสม</p>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/[0.08] transition-all premium-glow">
+<span class="material-symbols-outlined text-primary shrink-0 text-3xl" data-icon="report">report</span>
+<p class="text-on-surface leading-relaxed">หากพบเห็นสิ่งที่ขัดต่อกฎหรือทำให้รู้สึกไม่ปลอดภัย โปรดแจ้งพนักงานทันที เราต้องการให้เซิร์ฟเวอร์นี้เป็นพื้นที่ที่น่าอยู่!</p>
+</div>
+<div class="flex gap-5 p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-white/10 hover:bg-white/[0.08] transition-all premium-glow">
+<span class="material-symbols-outlined text-gold shrink-0 text-3xl" data-icon="link_off">link_off</span>
+<p class="text-on-surface leading-relaxed">ห้ามส่งลิ้งทุกอย่างในดิส</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Rule 2: Authority -->
+<div class="lg:col-span-4 reveal" style="animation-delay: 0.2s;">
+<div class="glass-card premium-glow cyan-border-glow rounded-3xl p-8 flex flex-col h-full">
+<div class="w-14 h-14 rounded-xl bg-cyan-400/10 flex items-center justify-center border border-cyan-400/20 mb-8">
+<span class="material-symbols-outlined text-[#00FFFF] text-3xl" data-icon="gavel">gavel</span>
+</div>
+<span class="text-[#00FFFF] text-xs font-bold tracking-widest uppercase opacity-70 mb-2">Section 02</span>
+<h2 class="text-2xl font-bold text-white mb-6">ผู้กำหนดกฎ</h2>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                ทุกคนที่เข้าร่วมกิจกรรมจะต้องปฏิบัติตามคำแนะนำ คำสั่ง และข้อกำหนดจาก <strong>เรา</strong> อย่างเคร่งครัด เพื่อให้การเล่นเกมและการอยู่ร่วมกันเป็นไปอย่างราบรื่น สนุก และปลอดภัย
+            </p>
+<div class="mt-auto p-4 rounded-xl bg-[#00FFFF]/5 border border-[#00FFFF]/10 text-center">
+<span class="text-[#00FFFF] text-[10px] font-black uppercase tracking-[0.2em]">Authority Check Verified</span>
+</div>
+</div>
+</div>
+<!-- Rule 3: Penalties -->
+<div class="lg:col-span-5 reveal" style="animation-delay: 0.1s;">
+<div class="glass-card premium-glow error-border-glow rounded-3xl p-8 h-full">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-xl bg-error/10 flex items-center justify-center border border-error/20">
+<span class="material-symbols-outlined text-error text-2xl" data-icon="warning">warning</span>
+</div>
+<div>
+<span class="text-error text-[10px] font-bold tracking-widest uppercase opacity-70">Section 03</span>
+<h2 class="text-2xl font-bold text-white">ผลลัพธ์เมื่อทำผิดกฎ</h2>
+</div>
+</div>
+<div class="space-y-6">
+<div class="group flex items-start gap-5 p-4 rounded-2xl hover:bg-white/5 transition-colors">
+<div class="w-10 h-10 rounded-full bg-error/20 text-error flex items-center justify-center font-bold shrink-0 border border-error/30 shadow-[0_0_15px_rgba(255,180,171,0.1)] group-hover:scale-110 transition-transform">1</div>
+<div>
+<p class="font-bold text-white mb-1">ครั้งแรก</p>
+<p class="text-on-surface-variant text-sm">พักการเข้าร่วมกิจกรรม หรือแบนออกจากกลุ่มเป็นเวลา 10 นาที</p>
+</div>
+</div>
+<div class="group flex items-start gap-5 p-4 rounded-2xl hover:bg-white/5 transition-colors">
+<div class="w-10 h-10 rounded-full bg-error text-surface-container-lowest flex items-center justify-center font-bold shrink-0 shadow-[0_0_20px_rgba(255,180,171,0.3)] group-hover:scale-110 transition-transform">2</div>
+<div>
+<p class="font-bold text-white mb-1">ทำผิดซ้ำ</p>
+<p class="text-on-surface-variant text-sm">ระงับการเข้าร่วมหรือแบนออกจากช่องทางดิสคอร์ดอย่างถาวร</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Rule 4: Exception -->
+<div class="lg:col-span-7 reveal" style="animation-delay: 0.2s;">
+<div class="glass-card premium-glow rounded-3xl overflow-hidden flex flex-col md:flex-row border-white/5 h-full">
+<div class="w-full md:w-5/12 relative min-h-[200px]">
+<img alt="Gaming Content" class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRHEIAfvAi7yJkuXwEaR1mvCFHJAc_jT0ACFuI9fdOZRXbS1RxZpjQpZN9t2gYasZVeqzKfklile2DDt0Y_AgfmvDNMizrvF53c1zOrDSY2pmATHw9aAmMbGUhI7wEgv59CaF-8ejGmRMrSUOGxNziS6zIOlqSwTV2fa-druXkEOIMML9QM8y9GrGKdYtlzAG2lDdzy2XImoySdDHbH_usy8mhyKc9_yLXS-l2nAnHZ-zkcdPVglDQOVRlcjpQMXIC6UQ1Hc42qdk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-transparent"></div>
+</div>
+<div class="w-full md:w-7/12 p-10 flex flex-col justify-center">
+<div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center border border-gold/20 mb-6">
+<span class="material-symbols-outlined text-gold text-2xl" data-icon="visibility">visibility</span>
+</div>
+<span class="text-gold text-[10px] font-bold tracking-widest uppercase opacity-70 mb-2">Section 04</span>
+<h2 class="text-2xl font-bold text-white mb-4">ข้อยกเว้น</h2>
+<p class="text-on-surface-variant leading-relaxed italic">
+                    แม้ว่าผู้กระทำผิดจะถูกแบนจากดิสคอร์ดแล้ว แต่ยังคงได้รับสิทธิ์ในการรับชมคลิปวิดีโอ หรือเนื้อหาลับต่างๆ ของช่องได้ตามปกติ
+                </p>
+</div>
+</div>
+</div>
+<!-- Section 5: Agreement -->
+<div class="lg:col-span-12 reveal" style="animation-delay: 0.1s;">
+<div class="glass-card premium-glow rounded-3xl p-10 md:p-16 text-center mt-8 border-primary/20 bg-gradient-to-b from-primary/5 to-transparent">
+<div class="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-8 border border-primary/20 shadow-[0_0_30px_rgba(88,101,242,0.2)]">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<span class="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-4 block">Final Step</span>
+<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">ข้อตกลงร่วมกัน</h2>
+<p class="text-on-surface text-lg max-w-3xl mx-auto mb-12 leading-relaxed opacity-90">
+                เมื่อคุณเข้าร่วมกลุ่มและกิจกรรม แสดงว่าคุณยอมรับและตกลงปฏิบัติตามกฎทุกข้อที่ระบุไว้ข้างต้น หากมีการเปลี่ยนแปลงกฎ เราจะแจ้งให้ทราบโดยเร็วที่สุด
+            </p>
+<div class="flex flex-col sm:flex-row gap-5 w-full justify-center items-center reveal" style="animation-delay: 0.3s;">
+<a class="btn-glow w-full sm:w-auto bg-discord-brand text-white font-bold px-12 py-5 rounded-2xl flex items-center justify-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-[0_8px_30px_rgba(88,101,242,0.4)] border border-white/10" href="https://discord.gg/M9ERkdcKd9" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037 19.736 19.736 0 0 0-4.885 1.515.069.069 0 0 0-.032.027C.533 9.048-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.006 14.006 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"></path></svg>
+                    JOIN OUR DISCORD
+                </a>
+
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-gutter mt-20 border-t border-white/5 bg-surface-container-lowest/50 backdrop-blur-md">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="text-center md:text-left">
+<span class="text-xl font-bold text-white tracking-tight">Hong Lap Gaming Community</span>
+<p class="text-sm text-on-surface-variant mt-3 opacity-60">© 2024 Hong Lap Gaming Community. Elevated Standards.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" href="#">Privacy Policy</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" href="#">Terms of Service</a>
+<a class="text-sm font-semibold text-on-surface-variant hover:text-primary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+    // Reading Progress
+    window.onscroll = function() {
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+
+    // Intersection Observer for Reveal Animations
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: stop observing after reveal
+                // revealObserver.unobserve(entry.target);
+            }
+        });
+    }, revealOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => {
+        revealObserver.observe(el);
+    });
+</script>
+</body></html>
